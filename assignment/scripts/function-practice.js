@@ -15,17 +15,16 @@ console.log('Test - should say "Hello World!"');
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-let givenName = 'Steven'
+let givenName='Steven';
 function helloName(name) {
-  console.log(`Hello, ${ name }`);
+  console.log(`Hello, ${name}`);
 }
-
 // Remember to call the function to test
 helloName(givenName)
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
-  return firstNumber+secondNumber;
+  return firstNumber + secondNumber;
 }
 console.log(addNumbers(1,2))
 
@@ -37,7 +36,7 @@ console.log(multiplyThree(1,2,3))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
+function isPositive(number) {
   if ( number > 0 ){
     return true;
   }
@@ -52,7 +51,7 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
+function getLast(array) {
   return array[array.length-1];
 }
 console.log(getLast([1,5,8,6]))
@@ -62,14 +61,13 @@ console.log(getLast([]))
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
+function find(value, array){
   let i=0
   let isTrue=false;
   while (i<array.length) {
-    if (array[i] === value) {
+    if (array[i]===value) {
       isTrue=true;
     }
-
     i++;
   }
   return isTrue;
@@ -83,9 +81,8 @@ console.log(find(2,[1,2,3,4]))
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
   let returnValue=false;
-  let firstLetter = string.slice(0,1)
-  if (firstLetter === letter) {
-    returnValue = true;
+  if (string[0]===letter) {
+    returnValue=true;
   }
   return returnValue;
 }
@@ -94,10 +91,10 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(givenArray) {
-  let sum = 0
-  let i = 0
-  while (i < givenArray.length) {
-    sum += givenArray[i];
+  let sum=0
+  let i=0
+  while (i<givenArray.length) {
+    sum+=givenArray[i];
     i++;
   }
   // TODO: loop to add items
@@ -108,10 +105,10 @@ console.log(sumAll([1,3,5,7]))
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function keepItPositive (mixedArray) {
-  let returnArray = [];
-  let i = 0;
+  let returnArray=[];
+  let i=0;
   while (i<mixedArray.length) {
-    if(mixedArray[i] > 0) {
+    if(mixedArray[i]>0) {
       returnArray.push(mixedArray[i]);
     }
   i++;
@@ -119,6 +116,7 @@ function keepItPositive (mixedArray) {
   return returnArray;
 }
 console.log(keepItPositive([2,-3,5,8,-5,0,5,0.1]));
+console.log(keepItPositive([]));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -127,11 +125,10 @@ console.log(keepItPositive([2,-3,5,8,-5,0,5,0.1]));
 
 //Complete the square sum function so that it squares each number passed into it and then sums the results together.
 function squareSum(numbers){
-  let total = 0;
-  let i = 0
-  let length=numbers.length
-  for (let i = 0; i < length; i++) {
-    total += numbers[i] * numbers[i];
+  let total=0;
+  let i=0
+  for (let i=0; i<numbers.length; i++) {
+    total+=numbers[i]*numbers[i];
   }
   return total;
 }
