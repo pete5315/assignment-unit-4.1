@@ -73,7 +73,9 @@ function find(value, array){
   return isTrue;
 }
 
-console.log(find(2,[1,2,3,4]))
+console.log(`This should be true: ${find(2,[1,2,3,4])}`)
+console.log(`This should be false: ${find(4.5,[1,2,3,4])}`)
+
 // ----------------------
 // Stretch Goals
 // ----------------------
