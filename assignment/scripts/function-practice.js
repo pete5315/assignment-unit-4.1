@@ -26,13 +26,13 @@ helloName(givenName)
 function addNumbers(firstNumber, secondNumber) {
   return firstNumber + secondNumber;
 }
-console.log(addNumbers(1,2))
+console.log(addNumbers(1,2));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber){
   return firstNumber*secondNumber*thirdNumber;
 }
-console.log(multiplyThree(1,2,3))
+console.log(multiplyThree(1,2,3));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -54,15 +54,15 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 function getLast(array) {
   return array[array.length-1];
 }
-console.log(getLast([1,5,8,6]))
+console.log(getLast([1,5,8,6]));
 
-console.log(getLast([]))
+console.log(getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array){
-  let i=0
+  let i=0;
   let isTrue=false;
   while (i<array.length) {
     if (array[i]===value) {
@@ -73,8 +73,8 @@ function find(value, array){
   return isTrue;
 }
 
-console.log(`This should be true: ${find(2,[1,2,3,4])}`)
-console.log(`This should be false: ${find(4.5,[1,2,3,4])}`)
+console.log(`This should be true: ${find(2,[1,2,3,4])}`);
+console.log(`This should be false: ${find(4.5,[1,2,3,4])}`);
 
 // ----------------------
 // Stretch Goals
@@ -93,8 +93,8 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(givenArray) {
-  let sum=0
-  let i=0
+  let sum=0;
+  let i=0;
   while (i<givenArray.length) {
     sum+=givenArray[i];
     i++;
@@ -128,7 +128,7 @@ console.log(keepItPositive([]));
 //Complete the square sum function so that it squares each number passed into it and then sums the results together.
 function squareSum(numbers){
   let total=0;
-  let i=0
+  let i=0;
   for (let i=0; i<numbers.length; i++) {
     total+=numbers[i]*numbers[i];
   }
